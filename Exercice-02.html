@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title> TP 1, Exo 2 </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+    <body>
+      <h1> Colloque &laquo;&nbsp;Applis web &nbsp;&raquo; du 18 au 19 octobre 2021 </h1>
+      <fieldset>
+        <legend>Pour vous inscrire, veuillez indiquer les informations suivantes:</legend>
+        <form action="inscrire" method="post">
+          <ul>
+            <li><label> Nom </label><input type="text" name="nom" /><br></li>
+            <li><label>Prénom </label><input type="text" name="prenom" /><br></li>
+            <li><label>Adresse de Facturation </label><textarea name="adresse" rows="5" cols="50"></textarea></li>
+            <li><label>Date d'arrivée </label><input type="date">
+                <label>Date de départ </label><input type="date"></li>
+            <li><label>Votre statut</label></li>
+                <input type="radio" value="conferencier"><label>Conférencier</label>
+                <input type="radio" value="chercheur"><label>Chercheur</label>
+                <input type="radio" value="industriel"><label>Industriel</label>
+            <li><label>Réservation souhaitée</label></li>
+                <input type="checkbox" value="Dj_jour1"><label>Déjeuner Jour 1</label>
+                <input type="checkbox" value="Dj_jour2"><label>Déjeuner Jour 2</label>
+                <input type="checkbox" value="Diner_jour1"><label>Diner Jour 1</label>
+                <input type="checkbox" value="Diner_jour2"><label>Diner Jour 2</label>
+          </ul>
+          <!-- Bouton pour soumettre le formulaire -->
+          <input type="submit" value="S'inscrire" />
+        </form>
+      </fieldset>
+    </body>
+</html>

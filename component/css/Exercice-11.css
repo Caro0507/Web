@@ -1,0 +1,162 @@
+body {
+    counter-reset: count;
+}
+
+header {
+    background-color: beige;
+    display: flex;
+    border: solid 2px;
+    border-radius: 2vh;
+    height: 120px;
+}
+
+header div {
+    background-color: red;
+    border: solid 2px;
+    border-radius: 2vh;
+    height: 120px;
+}
+
+#logo {
+    width: 120px;
+}
+
+#pub {
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[title="pub"] {
+    height: 100px;
+    width: 480px;
+    align-items: center;
+    border-radius: 2vh;
+    vertical-align: middle;
+}
+
+main {
+    background-color: beige;
+    display: flex;
+}
+
+#menu {
+    background-color: yellowgreen;
+    border: solid;
+    border-radius: 2vh;
+    float: left;
+    flex-shrink: 0;
+    width: 10em;
+}
+
+article {
+    position: relative;
+}
+
+#titre {
+    background-color: yellowgreen;
+    border: solid;
+    border-radius: 2vh;
+    text-align: center;
+}
+
+#recherche {
+    position: absolute;
+    top: 0;
+    right: 5em;
+    width: 10em;
+}
+
+.contenu {
+    background-color: beige;
+    border: solid;
+    border-radius: 2vh;
+}
+
+.encart {
+    background-color: yellowgreen;
+    border: solid;
+    border-radius: 2vh;
+    box-shadow: -0.5em 0.5em;
+    float: right;
+    clear: right;
+    width: 10em;
+    text-align: center;
+    padding: 10px;
+}
+
+.encart::before {
+    counter-increment: count;
+    content: counter(count) ".";
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#encart1 {
+    margin-top: 4ex;
+}
+
+#encart2 {
+    margin-top: 4ex;
+}
+
+p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+footer {
+    background-color: red;
+    border: solid;
+    border-radius: 2vh;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+@media (width < 800px) {
+    footer {
+        display: none;
+    }
+    header {
+        display: none;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    #recherche {
+        display: none;
+    }
+    .encart {
+        display: none;
+    }
+    #titre {
+        position: relative;
+    }
+    #menu::before {
+        content: "add icon";
+    }
+    #menu {
+        background-color: blue;
+        position: absolute;
+        z-index: 1;
+        width: 97%;
+    }
+    .menu {
+        display: none;
+        position: relative;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .menu li {
+        background-color: gray;
+        border: solid 2px;
+        list-style-type: none;
+    }
+    #menu:hover .menu {
+        display: block;
+    }
+}
